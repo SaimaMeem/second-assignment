@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Manrope&family=Poppins:wght@400;500;700&family=Roboto&display=swap');
+
+/* common styles */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sections {
+    margin: 50px 70px;
+}
+
+a.link-button {
+    display: inline-block;
+    margin-top: 10px;
+    background: #E02C6D;
+    border-radius: 41px;
+    padding: 10px 24px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+
+/* common styles */
+
+
+/* banner styles */
+
+.sections.banner {
+    display: flex;
+}
+
+.sections.banner>div {
+    width: 50%;
+}
+
+.banner-title {
+    font-size: 52px;
+    line-height: 70px;
+}
+
+.banner-description {
+    font-weight: 500;
+    text-align: justify;
+}
+
+.banner-image {
+    display: block;
+    background-image: url(images/others/Circle\ design.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.banner-image img {
+    display: block;
+    width: 340px;
+    height: 314px;
+    margin: 40px auto;
+}
+
+
+/* banner styles */
+
+
+/* logos styles */
+
+.logos {
+    margin: 100px;
+}
+
+hr {
+    margin: 30px 0;
+    height: 1px;
+    border: none;
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(40%, gray));
+}
+
+.brand-logos {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+
+/* logos styles */
