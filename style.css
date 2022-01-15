@@ -2,26 +2,88 @@
 
 /* common styles */
 
-body {
+* {
     padding: 0;
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: #3A3A3A;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #3A3A3A;
+    /* background-color: #F3F1FF; */
+}
+
+
+/* header styles */
+
 .sections {
-    margin: 50px;
+    /* width: 1300px; */
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+
+nav.sections {
+    margin-top: 30px;
+}
+
+ul.navigation {
+    display: flex;
+}
+
+ul li {
+    list-style: none;
+    margin: 0px 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #3A3A3A;
+    font-weight: 600;
+    padding: 15px;
+}
+
+
+/* header styles */
+
+
+/* common styles */
+
+
+/* main {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+} */
+
+.section {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 80px;
+    background-color: #ffffff;
 }
 
 a.link-button {
+    outline: 0;
+    border: 0;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 30px;
     background: #E02C6D;
     border-radius: 41px;
     padding: 10px 24px;
     text-decoration: none;
     color: white;
     font-weight: 600;
+    cursor: pointer;
 }
 
 
@@ -33,33 +95,35 @@ a.link-button {
 .sections.banner {
     display: flex;
     align-content: center;
+    justify-content: space-around;
+    /* height: calc(100vh - 100px); */
 }
 
 .sections.banner>div {
     width: 50%;
 }
 
-
-/* .banner-details {
-    margin-right: 30px;
-} */
+.banner-details {
+    margin-top: 40px;
+}
 
 .banner-title {
-    font-size: 52px;
-    line-height: 70px;
+    font-size: 40px;
+    line-height: 60px;
 }
 
 .banner-description {
+    margin-top: 10px;
     font-weight: 500;
     text-align: justify;
 }
 
 .banner-image {
-    width: auto;
-    display: block;
+    max-width: 38%;
+    height: 450px;
     background-image: url(./images/others/Circle\ design.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center center;
     background-size: contain;
 }
 
@@ -67,6 +131,8 @@ a.link-button {
     display: block;
     width: 340px;
     height: 314px;
+    /* max-width: 90%;
+height: auto; */
     margin: 40px auto;
 }
 
@@ -76,14 +142,6 @@ a.link-button {
 
 /* logos styles */
 
-.logos {
-    margin: 100px;
-}
-
-.brand-logos {
-    margin: auto 100px;
-}
-
 hr {
     margin: 30px 0;
     height: 1px;
@@ -91,9 +149,20 @@ hr {
     background: -webkit-gradient(linear, 0 0, 100% 0, from(transparent), to(transparent), color-stop(50%, gray));
 }
 
+.section.logos {
+    padding: 0px 80px;
+}
+
 .brand-logos {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+.brand-logos>img {
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -105,6 +174,7 @@ hr {
 .best-sellers-title {
     font-size: 36px;
     text-align: center;
+    margin: 30px 0;
 }
 
 .best-sellers-all {
@@ -115,22 +185,26 @@ hr {
 .best-sellers {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    grid-gap: 30px;
     margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 .product {
-    width: 330px;
-    height: 476px;
-    background: #FFFFFF;
+    width: 100%;
+    height: 485px;
+    margin: 20px auto;
+    background-color: #FFFFFF;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     padding: 15px;
 }
 
 .product-image img {
-    width: 330px;
-    height: 286px;
+    width: 100%;
+    height: 256px;
+    margin: 0 auto;
 }
 
 .product-title {
@@ -179,29 +253,35 @@ hr {
 
 /* must-haves */
 
-.sections.must-haves {
+.section.must-haves {
     display: flex;
-    margin: 110px 70px;
+    justify-content: space-between;
 }
 
 .must-have-title {
     /* font-weight: bold; */
     margin-top: 0px;
-    font-size: 32px;
+    font-size: 28px;
     color: #0A0826;
 }
 
 .must-have-image {
-    width: 40%;
+    width: 45%;
 }
 
 .must-have-details {
-    width: 60%;
+    width: 55%;
 }
 
 .must-have-text {
     color: #6C6C6C;
     font-weight: 600;
+    margin-top: 10px;
+}
+
+.link-button.click {
+    margin-top: 20px;
+    border-radius: 0;
 }
 
 
@@ -211,12 +291,18 @@ hr {
 /* footer */
 
 footer {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 180px;
+    height: 250px;
     background-color: #0A0826;
     text-align: center;
     padding: 60px 0px;
     color: white;
+}
+
+.footer {
+    padding: 5px;
 }
 
 .copyright-text {
@@ -225,6 +311,7 @@ footer {
 
 .socials {
     display: inline-flex;
+    justify-content: center;
 }
 
 .socials-background {
@@ -237,13 +324,68 @@ footer {
 }
 
 .fab {
-    padding: 8px;
     color: white;
-}
-
-.fa-youtube {
-    padding-left: 6px;
+    padding-top: 6px;
 }
 
 
 /* footer */
+
+
+/* media queries */
+
+
+/* for tablet devices */
+
+@media only screen and (max-width:1100px) {}
+
+@media only screen and (max-width:1100px) {
+    .best-sellers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    ul li {
+        margin: 0px 5px;
+    }
+    .banner-title {
+        font-size: 32px;
+        line-height: 50px;
+    }
+    .banner-image img {
+        width: 250px;
+        height: 300px;
+        padding-top: 60px;
+    }
+    .best-sellers-title {
+        font-size: 28px;
+    }
+    /* .must-have-text {
+            font-size: 14px;
+        }
+        .must-have-image img {
+            width: 100%;
+            display: block;
+            margin: 0 auto;
+        } */
+    .section.must-haves {
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+    .must-have-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .must-have-title,
+    .must-have-text {
+        text-align: center;
+    }
+    a.link-button.click {
+        display: inline-block;
+        margin: 20px auto;
+    }
+}
+
+
+/* media queries */
