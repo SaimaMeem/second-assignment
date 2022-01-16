@@ -360,6 +360,9 @@
             align-items: center;
             grid-row-gap: 20px;
         }
+        .product-image {
+            object-fit: cover;
+        }
         .section.must-haves {
             grid-template-columns: repeat(2, 1fr);
             grid-column-gap: 20px;
@@ -399,6 +402,9 @@
         }
         .brand-logos img {
             width: 50%;
+        }
+        .product-title {
+            font-size: 24px;
         }
         .section.must-haves {
             display: flex;
@@ -446,7 +452,7 @@
             width: 200px;
             height: 180px;
             padding: 0;
-            margin-left: 150px;
+            /* margin-left: 150px; */
         }
         .banner-image {
             margin-bottom: 10px;
